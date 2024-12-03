@@ -1,0 +1,164 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+#cart-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-detail{
+    flex:1;
+}
+
+.product-information{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+    padding:15px;
+    border-bottom: 1px solid black;
+}
+
+.product-title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.image-container{
+    height:10vw;
+    width:10vw;
+}
+
+.image-container img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+}
+
+.btn{
+    padding:8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn{
+    background-color: red;
+    color:white;
+    border:none;
+    box-shadow: none;
+}
+
+@media screen and (max-width:560px) {
+    .product-information{
+        flex-direction: column;
+        gap:10px;
+    }
+
+    .product-title{
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+    }
+}
+
+/* navbar component stylings */
+
+#navbar{
+    background-color: black;
+    color:white;
+    min-height:5vh;
+    padding:10px;
+}
+
+#menu-list{
+    display: flex;
+    align-items: baseline;
+    list-style: none;
+}
+
+#menu-list li{
+    margin-right:15px;
+    cursor: pointer;
+}
+
+.active{
+    font-size: large;
+    font-weight: bold;
+}
+
+#menu-list li:hover{
+    border-bottom: 1px solid red;
+    color:red;
+}
+
+@media screen and (max-width:560px) {
+
+    #menu-list{
+        flex-direction: column;
+    }
+
+    #menu-list li{
+        margin-right: 0;
+        margin-bottom:15px;
+    }
+
+}
+
+/* total price component */
+
+#total-price-container{
+    background-color: #002D62;
+    padding:20px;
+    color:white;
+    text-align: right;
+    display: inline-block;
+}
+
+#total-price-container>*{
+    margin-right: 15px;
+}
+
+/* footer component stylings */
+
+#footer-container{
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.footer{
+    flex:1;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer>*{
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:560px) {
+
+    #footer-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer{
+        margin-bottom: 20px;
+    }
+}
+
